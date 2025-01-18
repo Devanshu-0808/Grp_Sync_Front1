@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.12.1",
-    "@stomp/stompjs": "^7.0.0",
     "axios": "^1.7.9",
     "lottie-react": "^2.4.0",
     "lucide-react": "^0.469.0",
