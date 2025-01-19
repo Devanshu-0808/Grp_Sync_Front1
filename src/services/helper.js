@@ -13,7 +13,7 @@ export const myAxios = axios.create({
 export const myAxios2 = axios.create({
     baseURL: Base_URL,
     headers: {
-        'Content-Type': 'multipart/form-data'
+        'Content-Type': 'application/json'
     },
     withCredentials: true,
     
