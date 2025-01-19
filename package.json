@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "vite preview"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@lottiefiles/dotlottie-react": "^0.12.1",
@@ -26,8 +25,7 @@
     "react-youtube": "^10.1.0",
     "sass": "^1.83.4",
     "sockjs-client": "^1.6.1",
-    "stompjs": "^2.3.3",
-    "vite": "^6.0.5"
+    "stompjs": "^2.3.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
