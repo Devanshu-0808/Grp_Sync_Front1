@@ -21,8 +21,17 @@ export const AuthProvider = ({ children }) => {
     setIsAuthenticated(false);
   };
 
+  const fetchDashboard = async () => {
+    try {
+      const response = await axios.get(`${import.meta.env.VITE_API_URL}/dashboard`);
+      return response.data;
+    } catch (error) {
+      console.error('Fetch dashboard failed:', error);
+    }
+  };
+
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, login, logout, fetchDashboard }}>
       {children}
     </AuthContext.Provider>
   );

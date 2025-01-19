@@ -31,7 +31,7 @@ const LoginPage = () => {
       const username = email;
       login({ username, password })
         .then(({ data }) => {
-          if (data === "Dashboard") {
+          if (data === "Login Sucessful") {
             toast.success("Successfully logged in");
             authLogin(); // Update authentication state
             
@@ -39,7 +39,7 @@ const LoginPage = () => {
           }
           else
           {
-            toast.error("No user found")
+            toast.error(data)
           }
         })
         .catch((error) => {
