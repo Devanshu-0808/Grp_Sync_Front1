@@ -1,12 +1,20 @@
 import React, { createContext, useState, useContext } from 'react';
+import axios from 'axios';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const login = () => {
-    setIsAuthenticated(true);
+  const login = async (credentials) => {
+    try {
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/login`, credentials);
+      if (response.status === 200) {
+        setIsAuthenticated(true);
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
   };
 
   const logout = () => {
